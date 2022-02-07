@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap');
+
+
+:root {
+    /* fonts */
+    --heading-fonts:'Open Sans', sans-serif;
+    --bold-fonts: 'Montserrat', sans-serif;;
+    --paraghrap-fonts:'IBM Plex Sans Thai Looped', sans-serif;
+    /* colors */
+    --secundary:#fff;
+    --black:#000;
+    --gray:#eeebeb;
+    --gold1:#F4BD76;
+    --gold2:#F6CD8F;
+    --black1: #1A1B1F;
+    --black2: #30353B;
+}
+
+/* normalize style */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--paraghrap-fonts);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Global styles */
+
+.container {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {text-decoration: none;}
+
+h1, h2, h3, h4 {
+    font-family: var(--bold-fonts);
+    line-height: 1.5;
+}
+
+h1  {font-size: 4.8;}
+
+h2  {font-size: 4rem;}
+
+h3  {font-size: 3rem;}
+
+h4  {font-size: 2.8rem;}
+
+img {
+    max-width: 100%;
+    border-radius: 5%;
+}
+span {color: var(--gold1);}
+
+/* utilities */
+
+.no-margin {margin: 0;}
+
+.no-pading  {padding: 0;}
+
+.center-text {text-align: center;}
+
+/* --------------------------------------------------------------------- */
+/* Header */
+.header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(../img/banner.webp);
+}
+.header--register {
+    height: 100vh;
+}
+.header__text {
+    color: var(--secundary);
+    margin-top: 1rem;
+}
+.header__text h3,
+.header__text p {
+    margin: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .header__navbar {
+        display: flex;
+        width: 80%;
+        height: 7rem;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__text {margin-top: 15rem;}
+    .header__text h3 {font-size: 4rem;}
+    .header__text p {font-size: 2rem;}
+}
+/*---------------------------*/
+/* Logo */
+
+.logo__title,
+.navbar__nav a {
+    color: var(--secundary);
+}
+.logo__title {
+    font-weight: normal;
+}
+.logo__bold {
+    font-weight: bold;
+}
+/*---------------------------*/
+
+/* Navbar */
+
+.navbar__nav a {
+    display: block;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    font-family: var(--heading-fonts);
+}
+.navbar__nav a:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar__nav {
+        display: flex;
+    }
+    .navbar__nav a{
+        margin: 0 2rem;
+    }
+ }

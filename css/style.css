@@ -61,10 +61,7 @@ img {
     max-width: 100%;
     border-radius: 5%;
 }
-
-span {
-    color: var(--gold1);
-}
+span {color: var(--gold1);}
 
 /* utilities */
 
@@ -76,32 +73,24 @@ span {
 
 /* --------------------------------------------------------------------- */
 /* Header */
-
-.webp .header {
-    background-image: url(../img/banner.webp);
-}
-
-.no-webp {
-    background-image: url(../img/banner.jpg);
-}
-
 .header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50rem;
+    background-image: url(../img/banner.webp);
 }
-
+.header--register{
+    height: 100vh;
+}
 .header__text {
     color: var(--secundary);
     margin-top: 1rem;
 }
-
 .header__text h3,
 .header__text p {
     margin: 0 1rem;
 }
-
 
 @media screen and (min-width: 768px) {
     .header__navbar {
@@ -123,15 +112,12 @@ span {
 .navbar__nav a {
     color: var(--secundary);
 }
-
 .logo__title {
     font-weight: normal;
 }
-
 .logo__bold {
     font-weight: bold;
 }
-
 /*---------------------------*/
 
 /* Navbar */
@@ -205,9 +191,13 @@ span {
 /*-------------------------------*/
 /*About-us*/
 .container--about {
-    margin: 7rem auto;
+    margin: 3rem auto 7rem;
     padding: 5rem 0;
     background-color: var(--gray);    
+}
+
+.container--about h3 {
+    margin-bottom: 1rem;
 }
 .about-us {
     display: flex;
@@ -243,7 +233,7 @@ span {
 
 .container--gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     margin-bottom: 5rem;
 }
@@ -253,7 +243,7 @@ span {
 }
 .container--gallery a:hover img {
     transform: scale(1.3);
-    transition: transform 0.5s;
+    transition: transform 1s;
 }
 .container--gallery img {
     width: 100%;
@@ -270,6 +260,8 @@ span {
 .main > *{
     color: var(--secundary);
 }
+/* -------------------------------------- */
+/*Copy*/
 .footer__copy div {
     display: flex;
     flex-direction: column;
@@ -303,12 +295,6 @@ span {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-/* number */
-
-.numbers p {
-    margin: 0;
 }
 
 /* social media */
