@@ -5,26 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe Blog</title>
-    <meta name="description" content="Pagina Web sobre café"> <!--Nueva etiqueta meta-->
-    <!-- Preload -->
     <!-- Normalize -->
-    <link rel="preload" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- Styles -->
-    <link rel="preload" href="./css/style.css">
+    <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
-    <header class="header header--register">
-        <div class="header__navbar">
-            <a class="navbar__logo" href="index.html">
-                <h1 class="logo__title no-margin center-text">Centro<span class="logo__bold">DeCafé</span></h1>
-            </a>
-            <nav class="navbar__nav">
-                <a class="center-text" href="#">Blog</a>
-                <a class="center-text" href="#">Nosotros</a>
-                <a class="center-text" href="#">Contacto</a>
-            </nav>
-        </div>
-    </header>
+    <div class="register__section">
+        <h1 class="no-margin title__section">Centro<span>DeCafé</span></h1>
+        <p class="no-margin">Regístrate: </p>
+        <form class="login">
+            <input type="text" placeholder="Usuario" class="width">
+            <input type="email" placeholder="Correo Electrónico" class="width">
+            <input type="password" placeholder="Constraseña" class="width">       
+            <input type="password" placeholder="Repetir contraseña" class="width">
+            <p>¿Quiere suscribirse a nuestro NewsLatter?</p>
+
+            <div class="checkbox">
+                <label for="one">Yes:</label>
+                <input type="radio" name="opcion" id="one" class="checkbox-input">
+                <label for="two">No:</label>
+                <input type="radio" id="one" name="opcion" class="checkbox-input">
+            </div>
+        </form>
+        <p class="no-margin">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+        <button type="submit" class="btn">Iniciar</button>
+    </div><!--Final container-->
+</body>

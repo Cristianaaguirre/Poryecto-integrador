@@ -71,6 +71,8 @@ span {color: var(--gold1);}
 
 .center-text {text-align: center;}
 
+.width {width: 100%;}
+
 /* --------------------------------------------------------------------- */
 /* Header */
 .header {
@@ -79,9 +81,6 @@ span {color: var(--gold1);}
     background-size: cover;
     height: 50rem;
     background-image: url(../img/banner.webp);
-}
-.header--register{
-    height: 100vh;
 }
 .header__text {
     color: var(--secundary);
