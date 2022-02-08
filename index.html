@@ -16,16 +16,17 @@
 
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="header__navbar">
             <a class="navbar__logo" href="index.html">
                 <h1 class="logo__title no-margin center-text">Centro<span class="logo__bold">DeCafé</span></h1>
             </a>
             <nav class="navbar__nav center-text">
                 <a href="login.html" class="btn--login">Iniciar Sesión</a>
-                <a href="#">Blog</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Contacto</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">Nosotros</a>
+                <a href="#gallery">Galería</a>
+                <a href="#contact">Contacto</a>
             </nav>
         </div>
 
@@ -37,7 +38,7 @@
     </header>
 
     <main>
-        <section class="blog container">
+        <section id="blog" class="blog container">
             <h3 class="blog__title">Nuestro blog <span>:</span> Todo lo que tienes que saber</h3>
             <div class="blog__grid">
                 <article class="blog__article">
@@ -73,7 +74,7 @@
             </div><!--Final blog__grid-->
         </section><!--Final blog section-->
     
-        <section class="about-container">
+        <section id="about" class="about-container">
             <h3 class="center-text no-margin">Sobre Nosotros</h3>
     
             <div class="about-us container">
@@ -89,7 +90,7 @@
             </div>
         </section> <!--Fin del about-container-->
     
-        <section class="gallery container">
+        <section id="gallery" class="gallery container">
             <h3 class="gallery__title">Nuestras recomendaciones <span>:</span> los mejores tipos de café</h3>
             <div class="gallery__container container">
                 <a href="#">
@@ -114,7 +115,7 @@
         </section>
     </main>
 
-    <div class="contact__form contact-bg">
+    <div id="contact" class="contact__form contact-bg">
         <form class="form">
             <h4 class="no-margin">Suscribite a nuestro NewsLatter<span>.</span></h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, recusandae.</p>
@@ -133,7 +134,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <p class="no-margin">Av. San Martin 3817, Comodoro Rivadavia, Chubut</p>
                     </div>
-                </div>
+                </div> <!--Final contact direction-->
 
                 <div class="contact__numbers">
                     <h4 class="no-margin">Nuestros números:</h4>
@@ -145,7 +146,7 @@
                         <i class="fab fa-whatsapp"></i>
                         <p class="no-margin">+54 (222) 8748297</p>
                     </div>
-                </div>
+                </div> <!--Final contact numbers-->
 
                 <div class="social__media">
                     <h4 class="no-margin">Nuestras redes sociales: </h4>
@@ -167,6 +168,10 @@
                 </div>
             </div>
     </footer>
+
+    <a class="go-up" href="#header">
+        <img src="./img/coffe.svg" alt="imagen animada de un cafe">
+    </a>
 
     <script src="https://kit.fontawesome.com/32f9c4f293.js" crossorigin="anonymous"></script>  
     <script src="./js/modernizr.js"></script>

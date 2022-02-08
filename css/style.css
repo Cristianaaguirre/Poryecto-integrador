@@ -17,11 +17,12 @@
     --black2: #30353B;
 }
 
-/* normalize style */
+/*--------- Fonts styles-----------*/
 
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*1 rem = 10px*/
+    scroll-behavior: smooth;
 }
 *, *::before, *::after {
     box-sizing: inherit;
@@ -30,9 +31,10 @@ body {
     font-family: var(--paraghrap-fonts);
     font-size: 1.6rem;
     line-height: 2;
+    position: relative;
 }
 
-/* Global styles */
+/* -----------Global styles---------------- */
 
 .container {
     width: min(90%, 120rem);
@@ -53,15 +55,38 @@ img {
 }
 span {color: var(--gold1);}
 
-/* utilities */
+/*---------- utilities------------- */
 
 .no-margin {margin: 0;}
 .no-pading  {padding: 0;}
 .center-text {text-align: center;}
 .width {width: 100%;}
 
-/* --------------------------------------------------------------------- */
-/* Header */
+/* ---go up button--- */
+.go-up {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .go-up {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-radius: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .go-up img {
+        height: 5rem;
+        transition: transform .5s;
+    }
+    .go-up:hover img{
+        transform: rotate(360deg);
+    }
+}
+/* ----------------------------------------------------------------- */
+/* -----------Header -----------*/
 .header {
     background-position: center center;
     background-repeat: no-repeat;
@@ -69,9 +94,7 @@ span {color: var(--gold1);}
     height: 50rem;
     background-image: url(../img/banner.webp);
 }
-/*---------------------------*/
-/* Logo */
-
+/*----------- Logo ------------*/
 .logo__title,
 .navbar__nav a {
     color: var(--secundary);
@@ -82,9 +105,11 @@ span {color: var(--gold1);}
 .logo__bold {
     font-weight: bold;
 }
-/*---------------------------*/
-/* Navbar */
-
+/*--------- Navbar-----------*/
+.header__navbar {
+    width: 90%;
+    margin: 0 auto;
+}
 .navbar__nav a {
     display: block;
     margin: 2rem 0;
@@ -98,15 +123,13 @@ span {color: var(--gold1);}
     display: inline-block;
     padding: .3rem;
     border-radius: 1.5rem;
-    border: 1px solid var(--secundary);
+    border: 2px solid var(--secundary);
     transition: .3s;
 }
 .btn--login:hover {
     background-color: #F4BD76;
-    color: #1A1B1F;
 }
-/* ---------------------------- */
-/* hero */
+/*--------- Hero-----------*/
 .header__text {
     color: var(--secundary);
     margin-top: 1rem;
@@ -115,7 +138,7 @@ span {color: var(--gold1);}
 .header__text p {
     margin: 0 1rem;
 }
-/* MediaQ section Header */
+/* ----MediaQ section Header---- */
 
  @media screen and (min-width: 768px) {
     .header__navbar {
@@ -128,6 +151,7 @@ span {color: var(--gold1);}
     }
     .navbar__nav {
         display: flex;
+        align-items: center;
     }
     .navbar__nav a{
         margin: 0 2rem;
@@ -138,7 +162,7 @@ span {color: var(--gold1);}
 
 }
 /* ----------------------------------------------------------------- */
- /* Blog section */
+/*--------- Blog Section-----------*/
 
 .blog__title {
     font-family: var(--bold-fonts);
@@ -169,7 +193,7 @@ span {color: var(--gold1);}
     background-color: var(--black2);
 }
 
-/* MediaQ Blog Section */
+/*----- MediaQ Blog Section----- */
 @media screen and (min-width: 768px) {
     .blog__grid {
         width: 80%;
@@ -188,21 +212,19 @@ span {color: var(--gold1);}
     }
 }
 
-/*----------------------------------------------------------------*/
-/*About-us Section*/
+/* ----------------------------------------------------------------- */
+/*------ About-us Section--------*/
 .about-container {
     margin: 3rem auto 7rem;
     padding: 5rem 0;
     background-color: var(--gray);    
 }
-
 .about-container h3 {
     margin-bottom: 1rem;
 }
 .about-us {
     display: flex;
     flex-direction: column;
-    padding: 0 4rem;
     gap: 2rem;
 }
 .about-us__img {
@@ -227,12 +249,12 @@ span {color: var(--gold1);}
         flex: 0 0 60%;
     }
 }
-/*------------------------------------------------------------*/
-/*Gallery*/
+/* ----------------------------------------------------------------- */
+/*----------Gallery----------*/
 
 .gallery__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 1.5rem;
     margin-bottom: 5rem;
 }
@@ -248,11 +270,11 @@ span {color: var(--gold1);}
     width: 100%;
     object-fit: cover;
     vertical-align: top;
-    height: 30rem;
+    height: 26rem;
     border-radius: 0;
 }
- /* ------------------------------------------------------------ */
- /* NewsLatter */
+/* ----------------------------------------------------------------- */
+/*--------- NewsLatter-----------*/
 
 .contact-bg {
     background-image: url(../img/contacto.jpg);
@@ -300,15 +322,14 @@ span {color: var(--gold1);}
     }
 }
 /* ----------------------------------------------------------------- */
- /* Footer */
+ /*--------- Footer-----------*/
 .contact {
     background-color: var(--black1);
 }
 .contact > *{
     color: var(--secundary);
 }
-/* -------------------------------------- */
-/* Contact direction */
+/*--------- Contact direction-----------*/
 .contact-container {
     padding: 3rem;
     background-color: var(--black2);
@@ -321,15 +342,13 @@ span {color: var(--gold1);}
     align-items: center;
     gap: 1rem;
 }
-/* -------------------------------------- */
-/* social media */
+/*--------- Social media-----------*/
 .social__icons {
     justify-content: center;
     gap: 2rem;
     font-size: 2.5rem;
 }
-/* -------------------------------------- */
-/*Copy*/
+/*--------- Copy-----------*/
 .contac__copy div {
     display: flex;
     flex-direction: column;
@@ -356,4 +375,4 @@ span {color: var(--gold1);}
         gap:5rem;
    }
 }
-/* --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
