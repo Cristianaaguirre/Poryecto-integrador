@@ -10,7 +10,6 @@
     --paraghrap-fonts:'IBM Plex Sans Thai Looped', sans-serif;
     /* colors */
     --secundary:#fff;
-    --black:#000;
     --gray:#eeebeb;
     --gold1:#F4BD76;
     --gold2:#F6CD8F;
@@ -24,11 +23,9 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; /*1 rem = 10px*/
 }
-
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
 body {
     font-family: var(--paraghrap-fonts);
     font-size: 1.6rem;
@@ -41,22 +38,15 @@ body {
     width: min(90%, 120rem);
     margin: 0 auto;
 }
-
 a {text-decoration: none;}
-
 h1, h2, h3, h4 {
     font-family: var(--bold-fonts);
     line-height: 1.5;
 }
-
 h1  {font-size: 4.8;}
-
 h2  {font-size: 4rem;}
-
 h3  {font-size: 3rem;}
-
 h4  {font-size: 2.8rem;}
-
 img {
     max-width: 100%;
     border-radius: 5%;
@@ -66,11 +56,8 @@ span {color: var(--gold1);}
 /* utilities */
 
 .no-margin {margin: 0;}
-
 .no-pading  {padding: 0;}
-
 .center-text {text-align: center;}
-
 .width {width: 100%;}
 
 /* --------------------------------------------------------------------- */
@@ -82,6 +69,8 @@ span {color: var(--gold1);}
     height: 50rem;
     background-image: url(../img/banner.webp);
 }
+/* ---------------------------- */
+/* hero */
 .header__text {
     color: var(--secundary);
     margin-top: 1rem;
@@ -91,19 +80,6 @@ span {color: var(--gold1);}
     margin: 0 1rem;
 }
 
-@media screen and (min-width: 768px) {
-    .header__navbar {
-        display: flex;
-        width: 80%;
-        height: 7rem;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .header__text {margin-top: 15rem;}
-    .header__text h3 {font-size: 4rem;}
-    .header__text p {font-size: 2rem;}
-}
 /*---------------------------*/
 /* Logo */
 
@@ -118,7 +94,6 @@ span {color: var(--gold1);}
     font-weight: bold;
 }
 /*---------------------------*/
-
 /* Navbar */
 
 .navbar__nav a {
@@ -131,14 +106,28 @@ span {color: var(--gold1);}
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 768px) {
+/* Media section Header */
+
+ @media screen and (min-width: 768px) {
+    .header__navbar {
+        display: flex;
+        width: 80%;
+        height: 7rem;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__text {margin-top: 15rem;}
+    .header__text h3 {font-size: 4rem;}
+    .header__text p {font-size: 2rem;}
+
     .navbar__nav {
         display: flex;
     }
     .navbar__nav a{
         margin: 0 2rem;
     }
- }
+}
 /* ----------------------------------------------------------------- */
  /* Blog section */
 
@@ -168,7 +157,7 @@ span {color: var(--gold1);}
     text-transform: uppercase;
     font-family: var(--heading-fonts);
     color: var(--secundary);
-    background-color: var(--black);
+    background-color: var(--black2);
 }
 @media screen and (min-width: 768px) {
     .grid-container {
