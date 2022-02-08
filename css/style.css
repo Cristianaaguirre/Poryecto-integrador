@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap');
 
@@ -45,7 +44,7 @@ h1, h2, h3, h4 {
     font-family: var(--bold-fonts);
     line-height: 1.5;
 }
-h1  {font-size: 4.8;}
+
 h2  {font-size: 4rem;}
 h3  {font-size: 3rem;}
 h4  {font-size: 2.8rem;}
@@ -64,7 +63,21 @@ span {color: var(--gold1);}
 
 /* ---go up button--- */
 .go-up {
-    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.go-up img {
+    height: 3rem;
+    transition: transform .5s;
+}
+.go-up:hover img{
+    transform: rotate(360deg);
 }
 @media screen and (min-width: 768px) {
     .go-up {
@@ -93,25 +106,54 @@ span {color: var(--gold1);}
     background-size: cover;
     height: 50rem;
     background-image: url(../img/banner.webp);
+    position: relative;
 }
 /*----------- Logo ------------*/
+.menu--top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu i {
+    font-size: 2rem;
+    color: #fff;
+}
 .logo__title,
 .navbar__nav a {
     color: var(--secundary);
 }
 .logo__title {
     font-weight: normal;
+    font-size: 2.5rem;
 }
 .logo__bold {
     font-weight: bold;
 }
 /*--------- Navbar-----------*/
 .header__navbar {
+    padding-top: 2rem;
     width: 90%;
     margin: 0 auto;
 }
+.navbar__nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    height: 50vh;
+    width: 100%;
+    transition: .3s;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--black2);
+}
+.navbar__nav--modifier {
+    display: flex;
+}
 .navbar__nav a {
-    display: block;
     margin: 2rem 0;
     font-size: 1.8rem;
     font-family: var(--heading-fonts);
@@ -132,7 +174,7 @@ span {color: var(--gold1);}
 /*--------- Hero-----------*/
 .header__text {
     color: var(--secundary);
-    margin-top: 1rem;
+    margin-top: 10rem;
 }
 .header__text h3,
 .header__text p {
@@ -141,20 +183,33 @@ span {color: var(--gold1);}
 /* ----MediaQ section Header---- */
 
  @media screen and (min-width: 768px) {
+    .logo__title {
+        font-size: 4rem;
+    }
     .header__navbar {
         display: flex;
-        width: 80%;
+        width: 90%;
         height: 7rem;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
     }
+    .menu {
+        display: none;
+    }
     .navbar__nav {
         display: flex;
+        flex-direction: row;
+        position: static;
         align-items: center;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        background-color: transparent;
     }
     .navbar__nav a{
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
     .header__text {margin-top: 15rem;}
     .header__text h3 {font-size: 4rem;}
