@@ -74,30 +74,23 @@ span {color: var(--gold1);}
 }
 .go-up img {
     height: 3rem;
-    transition: transform .5s;
+    animation: rotate infinite 2s;
 }
-.go-up:hover img{
-    transform: rotate(360deg);
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @media screen and (min-width: 768px) {
-    .go-up {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        border-radius: 100%;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .go-up img {
         height: 5rem;
         transition: transform .5s;
     }
-    .go-up:hover img{
-        transform: rotate(360deg);
-    }
 }
+
 /* ----------------------------------------------------------------- */
 /* -----------Header -----------*/
 .header {
@@ -142,7 +135,7 @@ span {color: var(--gold1);}
     align-items: center;
     justify-content: center;
     margin-top: 60px;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     transition: .3s;
     top: 0;
@@ -157,9 +150,6 @@ span {color: var(--gold1);}
     margin: 2rem 0;
     font-size: 1.8rem;
     font-family: var(--heading-fonts);
-}
-.navbar__nav a:last-child {
-    margin-bottom: 0;
 }
 .btn--login {
     display: inline-block;
