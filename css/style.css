@@ -110,6 +110,7 @@ span {color: var(--gold1);}
 .menu i {
     font-size: 2rem;
     color: #fff;
+    cursor: pointer;
 }
 .logo__title,
 .navbar__nav a {
@@ -146,7 +147,8 @@ span {color: var(--gold1);}
 .navbar__nav--modifier {
     display: flex;
 }
-.navbar__nav a {
+.nav__option,
+.btn--login {
     margin: 2rem 0;
     font-size: 1.8rem;
     font-family: var(--heading-fonts);
@@ -158,9 +160,9 @@ span {color: var(--gold1);}
     border: 2px solid var(--secundary);
     transition: .3s;
 }
-.btn--login:hover {
-    background-color: #F4BD76;
-}
+.nav__option:hover{color: #F4BD76;}
+
+.btn--login:hover {background-color: #F4BD76;}
 /*--------- Hero-----------*/
 .header__text {
     color: var(--secundary);
@@ -372,12 +374,10 @@ span {color: var(--gold1);}
 }
 /* ----------------------------------------------------------------- */
  /*--------- Footer-----------*/
-.contact {
-    background-color: var(--black1);
-}
-.contact > *{
-    color: var(--secundary);
-}
+
+.contact {background-color: var(--black1);}
+.contact > *{color: var(--secundary);}
+
 /*--------- Contact direction-----------*/
 .contact-container {
     padding: 3rem;
@@ -390,6 +390,13 @@ span {color: var(--gold1);}
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+.icon:hover,
+.direction:hover,
+.number:hover,
+.terminos:hover{
+    color: #F4BD76;
+    cursor: pointer;
 }
 /*--------- Social media-----------*/
 .social__icons {
@@ -405,6 +412,8 @@ span {color: var(--gold1);}
 .container--copy p > a {
     color: var(--secundary);
 }
+
+
 /* MediaQ footer */
 @media screen and (min-width: 768px) {
     .contact-container {
