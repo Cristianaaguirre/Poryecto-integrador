@@ -72,10 +72,9 @@ span {color: var(--gold1);}
     justify-content: center;
     align-items: center;
 }
-.go-up img {
-    height: 3rem;
-    animation: rotate infinite 2s;
-}
+.go-up__img {height: 3rem;}
+.go-up__img--modifier {animation: rotate infinite 2s;}
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -101,8 +100,9 @@ span {color: var(--gold1);}
     background-image: url(../img/banner.webp);
     position: relative;
 }
+.header-bg{background-color: #1A1B1F;}
 /*----------- Logo ------------*/
-.menu--top {
+.navbar__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +124,7 @@ span {color: var(--gold1);}
 }
 /*--------- Navbar-----------*/
 .header__navbar {
-    padding-top: 2rem;
+    padding: 2rem 0;
     width: 90%;
     margin: 0 auto;
 }
@@ -134,8 +134,8 @@ span {color: var(--gold1);}
     position: absolute;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    height: 60vh;
+    margin-top: 7.5rem;
+    height: calc(100vh - 7.5rem);
     width: 100%;
     transition: .3s;
     top: 0;
@@ -176,6 +176,7 @@ span {color: var(--gold1);}
     .logo__title {
         font-size: 4rem;
     }
+    .header-bg{background: transparent;}
     .header__navbar {
         display: flex;
         width: 90%;
